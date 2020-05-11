@@ -9,11 +9,18 @@
 
 <body>
     <h1>
-    <p id="click"><img id="myPicture" src="d5.png" style="width:100px;height:100px;"></p> </h1>
-   
-    <div onclick="display_random_image()" id="demo" class="button_cont" 
-    align="center" ><a class="x" ><b>ROLL</b></a></div>
-    
+    <p id="click">
+        <img id="player" src="player.png" width="150" height="150" style="float:left">
+        <img id="myPicture" src="d5.png" style="width:100px;height:100px">
+        <img id="player" src="player.png" width="150" height="150" style="float:right">
+    </p> </h1>
+
+    <div align="center" >
+    <button value="Start" id="mixBut" class="y" align="center" ><b>START
+    </b></button>
+    <button onclick="display_random_image()" id="demo" class="x" 
+    align="center" ><b> ROLL </b></button>
+    </div>
   
     <script src="a.js"></script>
 </body>
