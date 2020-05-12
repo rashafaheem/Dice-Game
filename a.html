@@ -10,17 +10,31 @@
 <body>
     <h1>
     <p id="click">
-        <img id="player" src="player.png" width="150" height="150" style="float:left">
+        <img id="player1" src="player1.png" width="150" height="150" style="float:left">
+        <div class="score1">
+            <h6>SCORE: </h6>
+            <h6 id="player1Score"></h6>
+        </div>
+        
         <img id="myPicture" src="d5.png" style="width:100px;height:100px">
-        <img id="player" src="player.png" width="150" height="150" style="float:right">
+        <img id="player2" src="player1.png" width="150" height="150" style="float:right">
+        <div class="score2">
+            <h6>SCORE: </h6>
+            <h6 id="player2Score"></h6>
+        </div>
+        
     </p> </h1>
 
     <div align="center" >
-    <button value="Start" id="mixBut" class="y" align="center" ><b>START
+    <button id="mixBut" class="y" onclick="startGame()"><b>LET'S GO
     </b></button>
-    <button onclick="display_random_image()" id="demo" class="x" 
-    align="center" ><b> ROLL </b></button>
+    <button onclick= "rollDice();switchChance();" id="roll" class="x" ><b> ROLL 
+    </b></button>
+    <div id="rollDice()"></div>
+    <div id="switchChance()"></div>
     </div>
+
+   
   
     <script src="a.js"></script>
 </body>
