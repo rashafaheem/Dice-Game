@@ -76,7 +76,7 @@ if (moves % 2 == 0)
 else {
   console.log("p1");
   document.getElementById('player1').src='active1.png';
-  document.getElementById('player2').src='player2.png';
+  document.getElementById('player2').src='player1.png';
   score1 = score1 + score;
   p1Score.innerHTML = score1;
   
