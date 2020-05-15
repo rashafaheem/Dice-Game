@@ -63,27 +63,12 @@ function startGame()
       console.log("Stopped");
       document.getElementById("mixBut");
       document.getElementById("roll").disabled = true;
-      winner();
+      
     }
+      }
 
 
-function winner()
-{
-if (score1>score2)
-  {
-    console.log("w1");
-    document.getElementById("winner2").style.visibility = "hidden";
-    document.getElementById("winner1").style.visibility = "visible"; 
-  }
-  
-  else if (score1<score2){
-    console.log("w2");
-    document.getElementById("winner1").style.visibility = "hidden";
-    document.getElementById("winner2").style.visibility = "visible"; 
-    
-    }
-  }
- }
+
 
 function switchChance()
 {
@@ -95,6 +80,13 @@ if (moves % 2 == 0)
   document.getElementById('player1').src='player1.png';
   score2 = score2 + score;
   p2Score.innerHTML = score2;
+  if (score1==30)
+  {
+    console.log("w1");
+    document.getElementById("winner2").style.visibility = "hidden";
+    document.getElementById("winner1").style.visibility = "visible"; 
+  }
+  
 
 
 } 
@@ -104,7 +96,17 @@ else {
   document.getElementById('player2').src='player1.png';
   score1 = score1 + score;
   p1Score.innerHTML = score1;
+  if (score2==30){
+    console.log("w2");
+    document.getElementById("winner1").style.visibility = "hidden";
+    document.getElementById("winner2").style.visibility = "visible"; 
+    
+    }
   
 } 
 
 }
+
+
+
+  
