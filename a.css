@@ -8,7 +8,7 @@ body{
 h1{ 
     color: rgb(29, 44, 44);
     text-align: center;
-    padding: 100px 0;
+    padding: 5px 0;
 }
     .x {
         border: none;
@@ -55,16 +55,24 @@ h1{
 
             div.score1 {
                 position: absolute;
-                top: 260px;
+                top: 265px;
                 left: 0;
                 width: 150px;
             }
            
             div.score2 {
-                position: fixed;
-                bottom: 1000;
+                position: absolute;
+                top: 265px;
                 right: 0;
                 width: 190px;
             }
+
            
+            div.winner1 {
+                position: relative;
+                top: 100;
+                left:10;
+                width: 0px;
+                float: left;
+            }
             
