@@ -1,6 +1,5 @@
    
 var myPix = new Array("d1.png","d2.png","d3.png","d4.png","d5.png","d6.png");
-
 var p1Score = document.getElementById("player1Score");
 var p2Score = document.getElementById("player2Score");
 var score1 = 0;
@@ -40,8 +39,6 @@ function rollDice()
     }
    
 }
-
-
 document.getElementById("roll").disabled = true;
 function startGame()
 {   started = true;
@@ -66,11 +63,7 @@ function startGame()
       document.getElementById("roll").disabled = true;
       started = false;      
     }
-      }
-
-
-
-
+}
 function switchChance()
 {
 
@@ -89,9 +82,6 @@ if (moves % 2 == 0)
     document.getElementById("roll").disabled = true;
     
   }
-  
-
-
 } 
 else {
   console.log("p1");
@@ -104,12 +94,8 @@ else {
     document.getElementById("winner1").style.visibility = "hidden";
     document.getElementById("winner2").style.visibility = "visible"; 
     document.getElementById("roll").disabled = true;
-    
-    
-    }
-  
+}
 } 
-
 }
 
 
