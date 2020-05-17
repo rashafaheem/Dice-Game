@@ -7,6 +7,7 @@ var score1 = 0;
 var score2 = 0;
 var moves = 0;
 var randomNum;
+var started;
 
 document.getElementById("winner1").style.visibility = "hidden";
 document.getElementById("winner2").style.visibility = "hidden";
@@ -43,7 +44,7 @@ function rollDice()
 
 document.getElementById("roll").disabled = true;
 function startGame()
-{
+{   started = true;
     var x = document.getElementById("mixBut");
     if (x.innerHTML === "START") {
       x.innerHTML = "STOP";
@@ -63,7 +64,7 @@ function startGame()
       console.log("Stopped");
       document.getElementById("mixBut");
       document.getElementById("roll").disabled = true;
-      
+      started = false;      
     }
       }
 
@@ -80,11 +81,13 @@ if (moves % 2 == 0)
   document.getElementById('player1').src='player1.png';
   score2 = score2 + score;
   p2Score.innerHTML = score2;
-  if (score1==30)
+  if (score1>=30)
   {
     console.log("w1");
     document.getElementById("winner2").style.visibility = "hidden";
-    document.getElementById("winner1").style.visibility = "visible"; 
+    document.getElementById("winner1").style.visibility = "visible";
+    document.getElementById("roll").disabled = true;
+    
   }
   
 
@@ -96,10 +99,12 @@ else {
   document.getElementById('player2').src='player1.png';
   score1 = score1 + score;
   p1Score.innerHTML = score1;
-  if (score2==30){
+  if (score2>=30){
     console.log("w2");
     document.getElementById("winner1").style.visibility = "hidden";
     document.getElementById("winner2").style.visibility = "visible"; 
+    document.getElementById("roll").disabled = true;
+    
     
     }
   
